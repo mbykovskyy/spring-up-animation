@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Should Have Correct Keyframes</title>
+  <script src="../../platform/platform.js"></script>
+  <link rel="import" href="../../polymer-test-tools/tools.html">
+  <script src="../../polymer-test-tools/htmltest.js"></script>
+  <link rel="import" href="../spring-up-animation.html">
+</head>
+<body unresolved>
+  <spring-up-animation id="spring-up"></spring-up-animation>
+
+  <script>
+    document.addEventListener('polymer-ready', function() {
+      var animation = document.getElementById('spring-up').shadowRoot;
+      var keyframes = animation.querySelectorAll('core-animation-keyframe');
+      assert.equal(7, keyframes.length);
+
+      var expectedTransforms = [
+        'scale(1, 0)',
+        'scale(1, 1.5)',
+        'scale(1, 0.8)',
+        'scale(1, 1.2)',
+        'scale(1, 0.95)',
+        'scale(1, 1.05)',
+        'scale(1)'
+      ];
+
+      for (var i = 0; i < keyframes.length; ++i) {
+        var keyframe = keyframes[i];
+
+        var visibility = keyframe.querySelector('core-animation-prop[name="visibility"]');
+        assert.equal('visible', visibility.value);
+
+        var origin = keyframe.querySelector('core-animation-prop[name="transform-origin"]');
+        assert.equal('50% 100%', origin.value);
+
+        var transform = keyframe.querySelector('core-animation-prop[name="transform"]');
+        assert.equal(expectedTransforms[i], transform.value);
+      }
+
+      done();
+    });
+  </script>
+</body>
+</html>
