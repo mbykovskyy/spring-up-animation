@@ -1,0 +1,7 @@
+{
+  "name": "spring-up-animation#gh-pages",
+  "private": true,
+  "dependencies": {
+    "spring-up-animation": "mbykovskyy/spring-up-animation#master"
+  }
+}

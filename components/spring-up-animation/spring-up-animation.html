@@ -1,0 +1,65 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-animation/core-animation.html">
+
+<!--
+A spring up animation effect.
+
+Example:
+
+    <link rel="import" href="spring-up-animation.html">
+
+    <div id="box"></div>
+    <spring-up-animation id="spring-up" duration="500" easing="ease-out"></spring-up-animation>
+
+    <script>
+      document.addEventListener('polymer-ready', function() {
+        var animation = document.getElementById('spring-up');
+        animation.target = document.getElementById('box');
+        animation.play();
+      });
+    </script>
+
+@element spring-up-animation
+@blurb A spring up animation effect
+@homepage http://mbykovskyy.github.io/spring-up-animation
+@demo http://mbykovskyy.github.io/spring-up-animation/demo.html
+-->
+<polymer-element name="spring-up-animation" extends="core-animation" noscript>
+  <template>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1, 0)"></core-animation-prop>
+    </core-animation-keyframe>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1, 1.5)"></core-animation-prop>
+    </core-animation-keyframe>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1, 0.8)"></core-animation-prop>
+    </core-animation-keyframe>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1, 1.2)"></core-animation-prop>
+    </core-animation-keyframe>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1, 0.95)"></core-animation-prop>
+    </core-animation-keyframe>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1, 1.05)"></core-animation-prop>
+    </core-animation-keyframe>
+    <core-animation-keyframe>
+      <core-animation-prop name="visibility" value="visible"></core-animation-prop>
+      <core-animation-prop name="transform-origin" value="50% 100%"></core-animation-prop>
+      <core-animation-prop name="transform" value="scale(1)"></core-animation-prop>
+    </core-animation-keyframe>
+  </template>
+</polymer-element>

@@ -1,0 +1,38 @@
+{
+  "name": "spring-up-animation",
+  "description": "A Polymer web component for a spring up animation effect.",
+  "homepage": "https://github.com/mbykovskyy/spring-up-animation",
+  "author": "Maksym Bykovskyy",
+  "license": "MIT",
+  "main": "spring-up-animation.html",
+  "keywords": [
+    "spring-up-animation",
+    "web-component",
+    "web-components",
+    "polymer",
+    "spring",
+    "up",
+    "animation"
+  ],
+  "ignore": [
+    "**/.*",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "core-animation": "Polymer/core-animation#~0.5.1"
+  },
+  "devDependencies": {
+    "polymer-test-tools": "Polymer/polymer-test-tools#~0.5.1"
+  },
+  "_release": "25af9c58a6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "25af9c58a6eab0d1273f25ff59321decd92ff3f3"
+  },
+  "_source": "git://github.com/mbykovskyy/spring-up-animation.git",
+  "_target": "master",
+  "_originalSource": "mbykovskyy/spring-up-animation",
+  "_direct": true
+}
